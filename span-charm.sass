@@ -1,0 +1,85 @@
+// @include font-face(Monomono, Monomono)
+// @font-face 
+// 	font-family: "Monomono"
+// 	src: url("/Monomono.ttf") format("truetype")
+
+html
+    overflow: hidden
+    color: #fff
+    height: 100%
+    // font-family: Monomono
+body 
+    margin: 0
+    background-color: #000
+    overflow-y: auto
+    font-family: Microsoft YaHei
+    height: 100%
+nav
+    color: gray
+    background-color: #000
+    display: flex
+    text-align: center
+    #menu
+        width: 2em
+        cursor: pointer
+        &:hover
+            color: #000
+            background-color: #fff
+    #title
+        padding-left: 1em
+        padding-right: 1em
+        border: 1px
+        border-bottom: 0
+        border-color: #fff
+        cursor: default
+        &:hover
+            color: black
+            background-color: white
+    #min
+        width: 2em
+        margin-left: auto
+        cursor: pointer
+        &:hover
+            color: #000
+            background-color: #fff
+    #max
+        width: 2em
+        cursor: pointer
+        &:hover
+            color: #000
+            background-color: #fff
+    #close
+        width: 2em
+        cursor: pointer
+        &:hover
+            color: #fff
+            background-color: #f00
+button 
+    height: 19px
+    padding: 0
+    cursor: pointer
+    background-color: gray
+    border: none
+    color: white
+    text-align: center
+a
+    color: white
+    cursor: pointer
+    text-decoration: underline
+#output
+    
+#input
+    display: flex
+    color: white
+    background-color: black
+    cursor: default
+    &:focus
+        outline: 0px solid transparent
+
+#input-value
+    overflow-wrap: break-word
+    &:focus
+        outline: 0px solid transparent
+// #container
+
+
