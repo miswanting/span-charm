@@ -1,15 +1,18 @@
 html {
   overflow: hidden;
-  color: #fff;
   height: 100%;
+  background: rgba(0, 0, 0, 0);
 }
 
 body {
   margin: 0;
+  color: #fff;
   background-color: #000;
   overflow-y: auto;
   font-family: Microsoft YaHei;
   height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 nav {
@@ -18,55 +21,51 @@ nav {
   display: flex;
   text-align: center;
 }
-nav #menu {
+nav .menu {
   width: 2em;
   cursor: pointer;
 }
-nav #menu:hover {
+nav .menu:hover {
   color: #000;
-  background-color: #fff;
+  background-color: grey;
 }
-nav #title {
+nav .title {
   padding-left: 1em;
   padding-right: 1em;
-  border: 1px;
-  border-bottom: 0;
-  border-color: #fff;
   cursor: default;
 }
-nav #title:hover {
+nav .title:hover {
   color: black;
-  background-color: white;
+  background-color: grey;
 }
-nav #min {
-  width: 2em;
+nav .min {
+  width: 1.5em;
   margin-left: auto;
   cursor: pointer;
 }
-nav #min:hover {
-  color: #000;
-  background-color: #fff;
+nav .min:hover {
+  color: #0f0;
+  background-color: grey;
 }
-nav #max {
-  width: 2em;
+nav .max {
+  width: 1.5em;
   cursor: pointer;
 }
-nav #max:hover {
-  color: #000;
-  background-color: #fff;
+nav .max:hover {
+  color: #ff0;
+  background-color: grey;
 }
-nav #close {
-  width: 2em;
+nav .close {
+  width: 1.5em;
   cursor: pointer;
 }
-nav #close:hover {
-  color: #fff;
-  background-color: #f00;
+nav .close:hover {
+  color: #f00;
+  background-color: grey;
 }
 
 button {
   font: unset;
-  height: 19px;
   padding: 0;
   cursor: pointer;
   background-color: gray;
@@ -90,20 +89,20 @@ a:hover {
   background-color: #fff;
 }
 
-#input {
+.input {
   display: flex;
   color: white;
   background-color: black;
   cursor: default;
 }
-#input:focus {
+.input:focus {
   outline: 0px solid transparent;
 }
 
-#input-value {
+.input-value {
   overflow-wrap: break-word;
 }
-#input-value:focus {
+.input-value:focus {
   outline: 0px solid transparent;
 }
 

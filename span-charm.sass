@@ -5,55 +5,55 @@
 
 html
     overflow: hidden
-    color: #fff
     height: 100%
+    background: rgba(0,0,0,0)
     // font-family: Monomono
 body 
     margin: 0
+    color: #fff
     background-color: #000
     overflow-y: auto
     font-family: Microsoft YaHei
     height: 100%
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
 nav
     color: gray
     background-color: #000
     display: flex
     text-align: center
-    #menu
+    .menu
         width: 2em
         cursor: pointer
         &:hover
             color: #000
-            background-color: #fff
-    #title
+            background-color: grey
+    .title
         padding-left: 1em
         padding-right: 1em
-        border: 1px
-        border-bottom: 0
-        border-color: #fff
         cursor: default
         &:hover
             color: black
-            background-color: white
-    #min
-        width: 2em
+            background-color: grey
+    .min
+        width: 1.5em
         margin-left: auto
         cursor: pointer
         &:hover
-            color: #000
-            background-color: #fff
-    #max
-        width: 2em
+            color: #0f0
+            background-color: grey
+    .max
+        width: 1.5em
         cursor: pointer
         &:hover
-            color: #000
-            background-color: #fff
-    #close
-        width: 2em
+            color: #ff0
+            background-color: grey
+    .close
+        width: 1.5em
         cursor: pointer
         &:hover
-            color: #fff
-            background-color: #f00
+            color: #f00
+            background-color: grey
 button 
     font: unset
     padding: 0
@@ -73,9 +73,9 @@ a
         color: #000
         text-decoration: none
         background-color: #fff
-#output
+.output
     
-#input
+.input
     display: flex
     color: white
     background-color: black
@@ -83,7 +83,7 @@ a
     &:focus
         outline: 0px solid transparent
 
-#input-value
+.input-value
     overflow-wrap: break-word
     &:focus
         outline: 0px solid transparent
