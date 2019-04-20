@@ -30,9 +30,23 @@ nav .menu:hover {
   background-color: grey;
 }
 nav .title {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 0.5em;
+  padding-right: 0em;
   cursor: default;
+}
+nav .title.active {
+  color: grey;
+  background-color: #222;
+}
+nav .title .close {
+  padding-left: 0.2em;
+  padding-right: 0.5em;
+  cursor: pointer;
+  color: #000;
+}
+nav .title .close:hover {
+  color: #f00;
+  background-color: grey;
 }
 nav .title:hover {
   color: black;

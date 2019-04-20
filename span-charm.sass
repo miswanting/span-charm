@@ -1,8 +1,4 @@
-// @include font-face(Monomono, Monomono)
-// @font-face 
-// 	font-family: "Monomono"
-// 	src: url("/Monomono.ttf") format("truetype")
-
+// 行高：21px
 html
     overflow: hidden
     height: 100%
@@ -17,7 +13,7 @@ body
     height: 100%
     border-top-left-radius: 10px
     border-top-right-radius: 10px
-nav
+nav // 窗口头
     color: gray
     background-color: #000
     display: flex
@@ -29,9 +25,20 @@ nav
             color: #000
             background-color: grey
     .title
-        padding-left: 1em
-        padding-right: 1em
+        padding-left: .5em
+        padding-right: 0em
         cursor: default
+        &.active
+            color: grey
+            background-color: #222
+        .close
+            padding-left: 0.2em
+            padding-right: 0.5em
+            cursor: pointer
+            color: #000
+            &:hover
+                color: #f00
+                background-color: grey
         &:hover
             color: black
             background-color: grey
