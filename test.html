@@ -61,18 +61,30 @@
     <div class="viewport">
         <div class="container">
             <div class="output">
-                <div>Span Charm [版本 0.1.0]</div>
+                <!-- 有多行 -->
+                <div>
+                    <span>
+                        Span Charm [版本 0.1.0]
+                    </span>
+                </div>
+                <div>
+                    <span class="text">测试文字</span>
+                    <span class="button">测试按钮</span>
+                    <span class="link">测试链接</span>
+                    <span class="check">测试多选</span>
+                    <span class="radio">测试单选</span>
+                    <span class="bar">测试进度</span>
+                    <span class="bar">测试评分</span>
+                    <span class="bar">测试气泡</span>
+                </div>
             </div>
             <div class="input">
-                <div class="input-icon">></div>
-                <div class="input-value" contenteditable="true">123</div>
+                <!-- 只有一行 -->
+                <span>></span>
+                <span class="input-value" contenteditable="true">123</span>
             </div>
-            <table>
-                <tr>
-                    <td>></td>
-                    <td contenteditable="true"></td>
-                </tr>
-            </table>
+            <div>
+            </div>
         </div>
     </div>
     <script src="span-charm.js"></script>
