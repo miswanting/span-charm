@@ -1,4 +1,8 @@
+$line-height:21px
 // 行高：21px
+// * 
+//     line-height: $line-height
+//     height: $line-height
 html
     overflow: hidden
     height: 100%
@@ -61,7 +65,7 @@ nav // 窗口头
         &:hover
             color: #f00
             background-color: grey
-button 
+span.button 
     font: unset
     padding: 0
     cursor: pointer
@@ -72,7 +76,7 @@ button
     &:hover
         color: #000
         background-color: #fff
-a
+span.link
     color: white
     cursor: pointer
     text-decoration: underline
@@ -92,6 +96,7 @@ a
 
 .input-value
     overflow-wrap: break-word
+    width: 100%
     &:focus
         outline: 0px solid transparent
 // #container

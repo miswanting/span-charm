@@ -78,7 +78,7 @@ nav .close:hover {
   background-color: grey;
 }
 
-button {
+span.button {
   font: unset;
   padding: 0;
   cursor: pointer;
@@ -87,17 +87,17 @@ button {
   color: white;
   text-align: center;
 }
-button:hover {
+span.button:hover {
   color: #000;
   background-color: #fff;
 }
 
-a {
+span.link {
   color: white;
   cursor: pointer;
   text-decoration: underline;
 }
-a:hover {
+span.link:hover {
   color: #000;
   text-decoration: none;
   background-color: #fff;
@@ -115,6 +115,7 @@ a:hover {
 
 .input-value {
   overflow-wrap: break-word;
+  width: 100%;
 }
 .input-value:focus {
   outline: 0px solid transparent;
