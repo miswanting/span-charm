@@ -78,8 +78,22 @@ nav .close:hover {
   background-color: grey;
 }
 
-span.button {
-  font: unset;
+.output div {
+  font-size: 0;
+}
+.output span {
+  font-size: medium;
+}
+.output span.text div.popup {
+  visibility: hidden;
+  display: none;
+}
+.output span.text:hover div.popup {
+  font-size: medium;
+  visibility: visible;
+  display: block;
+}
+.output span.button {
   padding: 0;
   cursor: pointer;
   background-color: gray;
@@ -87,22 +101,38 @@ span.button {
   color: white;
   text-align: center;
 }
-span.button:hover {
+.output span.button:hover {
   color: #000;
   background-color: #fff;
 }
-
-span.link {
+.output span.button:hover div.popup {
+  font-size: medium;
+  visibility: visible;
+  display: block;
+}
+.output span.button div.popup {
+  visibility: hidden;
+  display: none;
+}
+.output span.link {
   color: white;
   cursor: pointer;
   text-decoration: underline;
 }
-span.link:hover {
+.output span.link:hover {
   color: #000;
   text-decoration: none;
   background-color: #fff;
 }
-
+.output span.link:hover div.popup {
+  font-size: medium;
+  visibility: visible;
+  display: block;
+}
+.output span.link div.popup {
+  visibility: hidden;
+  display: none;
+}
 .input {
   display: flex;
   color: white;
@@ -112,12 +142,11 @@ span.link:hover {
 .input:focus {
   outline: 0px solid transparent;
 }
-
-.input-value {
+.input .input-value {
   overflow-wrap: break-word;
   width: 100%;
 }
-.input-value:focus {
+.input .input-value:focus {
   outline: 0px solid transparent;
 }
 

@@ -1,4 +1,4 @@
-$line-height:21px
+$font-size: medium
 // 行高：21px
 // * 
 //     line-height: $line-height
@@ -46,45 +46,77 @@ nav // 窗口头
         &:hover
             color: black
             background-color: grey
-    .min
+    .min // 最小化按钮
         width: 1.5em
         margin-left: auto
         cursor: pointer
         &:hover
             color: #0f0
             background-color: grey
-    .max
+    .max // 最大化按钮
         width: 1.5em
         cursor: pointer
         &:hover
             color: #ff0
             background-color: grey
-    .close
+    .close // 关闭按钮
         width: 1.5em
         cursor: pointer
         &:hover
             color: #f00
             background-color: grey
-span.button 
-    font: unset
-    padding: 0
-    cursor: pointer
-    background-color: gray
-    border: none
-    color: white
-    text-align: center
-    &:hover
-        color: #000
-        background-color: #fff
-span.link
-    color: white
-    cursor: pointer
-    text-decoration: underline
-    &:hover
-        color: #000
-        text-decoration: none
-        background-color: #fff
 .output
+    div
+        font-size: 0
+    span
+        font-size: $font-size
+        &.text 
+            div.popup
+                visibility: hidden
+                display: none
+            &:hover
+                div.popup
+                    font-size: $font-size
+                    visibility: visible
+                    display: block
+        &.button 
+            padding: 0
+            cursor: pointer
+            background-color: gray
+            border: none
+            color: white
+            text-align: center
+            &:hover
+                color: #000
+                background-color: #fff
+                div.popup
+                    font-size: $font-size
+                    visibility: visible
+                    display: block
+            div.popup
+                visibility: hidden
+                display: none
+        &.link
+            color: white
+            cursor: pointer
+            text-decoration: underline
+            &:hover
+                color: #000
+                text-decoration: none
+                background-color: #fff 
+                div.popup
+                    font-size: $font-size
+                    visibility: visible
+                    display: block
+            div.popup
+                visibility: hidden
+                display: none
+        &.check
+            &:hover
+        &.bar
+        &.rate
+        &.radio
+            &:hover
     
 .input
     display: flex
@@ -93,12 +125,8 @@ span.link
     cursor: default
     &:focus
         outline: 0px solid transparent
-
-.input-value
-    overflow-wrap: break-word
-    width: 100%
-    &:focus
-        outline: 0px solid transparent
-// #container
-
-
+    .input-value
+        overflow-wrap: break-word
+        width: 100%
+        &:focus
+            outline: 0px solid transparent
