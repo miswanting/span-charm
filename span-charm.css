@@ -133,6 +133,27 @@ nav .close:hover {
   visibility: hidden;
   display: none;
 }
+.output span.check {
+  cursor: pointer;
+  background-color: gray;
+}
+.output span.check:hover {
+  text-decoration: underline;
+}
+.output span.bar {
+  font-size: 0;
+  display: inline-block;
+  width: 100px;
+  line-height: 21px;
+}
+.output span.radio {
+  cursor: pointer;
+  background-color: gray;
+}
+.output span.radio:hover {
+  text-decoration: underline;
+}
+
 .input {
   display: flex;
   color: white;

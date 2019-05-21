@@ -1,4 +1,5 @@
 $font-size: medium
+$line-height: 21px
 // 行高：21px
 // * 
 //     line-height: $line-height
@@ -112,11 +113,21 @@ nav // 窗口头
                 visibility: hidden
                 display: none
         &.check
+            cursor: pointer
+            background-color: gray
             &:hover
+                text-decoration: underline
         &.bar
+            font-size: 0
+            display: inline-block
+            width: 100px
+            line-height: $line-height
         &.rate
         &.radio
+            cursor: pointer
+            background-color: gray
             &:hover
+                text-decoration: underline
     
 .input
     display: flex
