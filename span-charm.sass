@@ -1,5 +1,5 @@
 $font-size: medium
-$line-height: 21px
+$line-height: 18px
 // 行高：21px
 // * 
 //     line-height: $line-height
@@ -119,9 +119,18 @@ nav // 窗口头
                 text-decoration: underline
         &.bar
             font-size: 0
+            background-color: darkgray
             display: inline-block
             width: 100px
-            line-height: $line-height
+            position: relative
+            top: 3px
+            height: $line-height - 1
+            .barbar
+                display: inline-block
+                width: 50%
+                height: 100%
+                background-color: gray
+
         &.rate
         &.radio
             cursor: pointer
