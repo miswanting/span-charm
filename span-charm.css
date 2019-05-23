@@ -84,14 +84,23 @@ nav .close:hover {
 .output span {
   font-size: medium;
 }
+.output span.text {
+  position: relative;
+}
 .output span.text div.popup {
+  font-size: medium;
+  position: absolute;
   visibility: hidden;
-  display: none;
+  text-align: center;
+  display: inline-block;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  background-color: dimgray;
 }
 .output span.text:hover div.popup {
-  font-size: medium;
   visibility: visible;
-  display: block;
 }
 .output span.button {
   padding: 0;
@@ -100,24 +109,44 @@ nav .close:hover {
   border: none;
   color: white;
   text-align: center;
+  position: relative;
+}
+.output span.button div.popup {
+  font-size: medium;
+  position: absolute;
+  visibility: hidden;
+  text-align: center;
+  display: inline-block;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  background-color: dimgray;
 }
 .output span.button:hover {
   color: #000;
   background-color: #fff;
 }
 .output span.button:hover div.popup {
-  font-size: medium;
   visibility: visible;
-  display: block;
-}
-.output span.button div.popup {
-  visibility: hidden;
-  display: none;
 }
 .output span.link {
   color: white;
   cursor: pointer;
   text-decoration: underline;
+  position: relative;
+}
+.output span.link div.popup {
+  font-size: medium;
+  position: absolute;
+  visibility: hidden;
+  text-align: center;
+  display: inline-block;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  background-color: dimgray;
 }
 .output span.link:hover {
   color: #000;
@@ -125,13 +154,7 @@ nav .close:hover {
   background-color: #fff;
 }
 .output span.link:hover div.popup {
-  font-size: medium;
   visibility: visible;
-  display: block;
-}
-.output span.link div.popup {
-  visibility: hidden;
-  display: none;
 }
 .output span.check {
   cursor: pointer;
@@ -142,7 +165,7 @@ nav .close:hover {
 }
 .output span.bar {
   font-size: 0;
-  background-color: darkgray;
+  background-color: dimgray;
   display: inline-block;
   width: 100px;
   position: relative;
@@ -153,7 +176,7 @@ nav .close:hover {
   display: inline-block;
   width: 50%;
   height: 100%;
-  background-color: gray;
+  background-color: lightgray;
 }
 .output span.radio {
   cursor: pointer;
