@@ -2,6 +2,7 @@
     div
         nav-component
         container-component
+        div {{data}}
 </template>
 
 <script lang="ts">
@@ -10,27 +11,12 @@ import NavComponent from "./Nav.vue";
 import ContainerComponent from "./Container.vue";
 
 export default Vue.extend({
-  props: ["name", "initialEnthusiasm"],
+  props: ["data"],
   data() {
-    return {
-      enthusiasm: this.initialEnthusiasm
-    };
+    return {};
   },
-  methods: {
-    increment() {
-      this.enthusiasm++;
-    },
-    decrement() {
-      if (this.enthusiasm > 1) {
-        this.enthusiasm--;
-      }
-    }
-  },
-  computed: {
-    exclamationMarks(): string {
-      return Array(this.enthusiasm + 1).join("!");
-    }
-  },
+  methods: {},
+  computed: {},
   components: {
     NavComponent,
     ContainerComponent
