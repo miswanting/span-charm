@@ -4,7 +4,7 @@ let v = new Vue({
     el: "#app",
     template: `
     <div>
-        <window-component data=data />
+        <window-component :data=$data />
     </div>
     `,
     data: function () {
