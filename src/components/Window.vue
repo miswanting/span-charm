@@ -2,7 +2,6 @@
     div
         nav-component(:mode='data.mode')
         container-component
-        div {{data}}
 </template>
 
 <script lang="ts">
