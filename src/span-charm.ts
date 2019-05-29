@@ -1,5 +1,6 @@
 import Vue from "vue";
 import WindowComponent from "./components/Window.vue";
+import './span-charm.sass'
 let v = new Vue({
     el: "#app",
     template: `
