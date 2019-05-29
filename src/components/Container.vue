@@ -29,35 +29,25 @@
                     span(class="radio active") 测试单选1
                     span(class="radio") 测试单选2
                     span(class="radio") 测试禁用单选3
-            div(class="output")
-                span >
-                span(class="input-value" contenteditable="true") 123
+            input-component(@input="input")
+            //- div(class="input")
+            //-     span >
+            //-     span(class="input-value" contenteditable="true")
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 
+import InputComponent from "./Input.vue";
+
 export default Vue.extend({
-  props: ["name", "initialEnthusiasm"],
-  data() {
-    return {
-      enthusiasm: this.initialEnthusiasm
-    };
-  },
   methods: {
-    increment() {
-      this.enthusiasm++;
-    },
-    decrement() {
-      if (this.enthusiasm > 1) {
-        this.enthusiasm--;
-      }
+    input: function(e: any) {
+      console.log("aaa", e);
     }
   },
-  computed: {
-    exclamationMarks(): string {
-      return Array(this.enthusiasm + 1).join("!");
-    }
+  components: {
+    InputComponent
   }
 });
 </script>
