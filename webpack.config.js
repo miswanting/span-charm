@@ -1,5 +1,6 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 script = {
     entry: './src/span-charm.ts',
@@ -38,6 +39,13 @@ script = {
                     'vue-style-loader',
                     'css-loader'
                 ]
+            }, {
+                test: /\.(sass|scss)$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader",
+                ]
             },
             {
                 test: /\.pug$/,
@@ -56,24 +64,4 @@ script = {
         new VueLoaderPlugin()
     ]
 }
-style = {
-    entry: './src/span-charm.sass',
-    mode: 'development',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'span-charm.css'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(sass|scss)$/,
-                use: [
-                    "style-loader", // 将 JS 字符串生成为 style 节点
-                    "css-loader", // 将 CSS 转化成 CommonJS 模块
-                    "sass-loader" // 将 Sass 编译成 CSS，默认使用 Node Sass
-                ]
-            }
-        ]
-    }
-}
-module.exports = [style, script]
+module.exports = script
