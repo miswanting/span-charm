@@ -1,6 +1,6 @@
 <template lang="pug">
     div
-        nav-component
+        nav-component(:mode='data.mode')
         container-component
         div {{data}}
 </template>

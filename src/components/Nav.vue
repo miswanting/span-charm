@@ -1,18 +1,9 @@
 <template lang="pug">
     nav
-        span(class='menu') ≡
-        span(class='title active') EraTerminal
-            span(class='close') ●
-        span(class='title') EraTerminal
-            span(class='close') ●
-        span(class='title') EraTerminal
-            span(class='close') ●
-        span(class='title') EraTerminal
-            span(class='close') ●
-        span(class='title') EraTerminal
-            span(class='close') ●
-        span(class='title') EraTerminal
-            span(class='close') ●
+        //- span(class='menu') ≡
+        menu-component
+        title-component(v-if='mode==="single"')
+        tag-component(v-else)
         span(class='min') ●
         span(class='max') ●
         span(class='close') ●
@@ -20,28 +11,16 @@
 
 <script lang="ts">
 import Vue from "vue";
+import MenuComponent from "./Menu.vue";
+import TitleComponent from "./Title.vue";
+import TagComponent from "./Tag.vue";
 
 export default Vue.extend({
-  props: ["name", "initialEnthusiasm"],
-  data() {
-    return {
-      enthusiasm: this.initialEnthusiasm
-    };
-  },
-  methods: {
-    increment() {
-      this.enthusiasm++;
-    },
-    decrement() {
-      if (this.enthusiasm > 1) {
-        this.enthusiasm--;
-      }
-    }
-  },
-  computed: {
-    exclamationMarks(): string {
-      return Array(this.enthusiasm + 1).join("!");
-    }
+  props: ["mode"],
+  components: {
+    MenuComponent,
+    TitleComponent,
+    TagComponent
   }
 });
 </script>
