@@ -4,9 +4,7 @@ import './span-charm.sass'
 let v = new Vue({
     el: "#app",
     template: `
-    <div>
-        <window-component :data=$data />
-    </div>
+    <window-component :data=$data />
     `,
     data: function () {
         return { // system
