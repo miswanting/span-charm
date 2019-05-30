@@ -54,12 +54,36 @@ let v = new Vue({
         WindowComponent
     }
 });
-function addPage() {
-
+function newProgram(name: string = 'N/A') {
+    let newProgram = {
+        type: 'program',
+        name: name,
+        hash: '',
+        title: name,
+        nav: {},
+        container: {
+            pages: []
+        }
+    }
+    v.$data.programs.push(newProgram)
+    return newProgram.hash
 }
-function addLine() {
-
+function newPage(programHash: string) {
+    let program = getHashProgram(programHash)
 }
-function addComponent() {
-
+function newLine(programHash: string) {
+    let program = getHashProgram(programHash)
 }
+function newComponent(programHash: string) {
+    let program = getHashProgram(programHash)
+}
+function getHashProgram(programHash: string) {
+    for (let i = 0; i < v.$data.programs.length; i++) {
+        const program = v.$data.programs[i];
+        if (program.hash == programHash) {
+            return program
+        }
+    }
+}
+let hash = newProgram('test')
+newPage(hash)
