@@ -1,7 +1,9 @@
 <template lang="pug">
     div(class="viewport")
         div(class="container")
+            page-component(v-for="page in data.pages" :key="page.id" :data="page")
             div(class="output")
+                line-component(:data='data')
                 div
                     span Span Charm [版本 0.1.0]
                 div
@@ -38,16 +40,21 @@
 <script lang="ts">
 import Vue from "vue";
 
+import PageComponent from "./Page.vue";
+import LineComponent from "./Line.vue";
 import InputComponent from "./Input.vue";
 
 export default Vue.extend({
+  props: ["data"],
   methods: {
     input: function(e: any) {
       console.log("aaa", e);
     }
   },
   components: {
-    InputComponent
+    PageComponent,
+    InputComponent,
+    LineComponent
   }
 });
 </script>
