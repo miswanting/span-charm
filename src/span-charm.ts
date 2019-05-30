@@ -28,7 +28,11 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: 'test text'
+                                                value: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+                                            },
+                                            { // text
+                                                type: 'text',
+                                                value: '啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊'
                                             },
                                             { // link
                                                 type: 'link',
@@ -37,6 +41,20 @@ let v = new Vue({
                                             { // button
                                                 type: 'button',
                                                 value: 'test button'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            { // page
+                                type: 'page',
+                                lines: [
+                                    { // line
+                                        type: 'line',
+                                        child: [
+                                            { // text
+                                                type: 'text',
+                                                value: '啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊'
                                             }
                                         ]
                                     }
