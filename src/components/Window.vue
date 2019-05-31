@@ -20,13 +20,13 @@ export default Vue.extend({
   },
   methods: {},
   computed: {
-    navData: function() {
+    navData: function(): Object {
       let data = {
         currentIndex: 0,
         titles: []
       };
       for (let i = 0; i < this.$props.data.programs.length; i++) {
-        const program: Object = this.$props.data.programs[i];
+        const program: any = this.$props.data.programs[i];
         data.titles.push(program.title);
       }
       return data;

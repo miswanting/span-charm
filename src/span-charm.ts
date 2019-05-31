@@ -28,33 +28,45 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
-                                            },
-                                            { // text
-                                                type: 'text',
-                                                value: '啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊'
-                                            },
-                                            { // link
-                                                type: 'link',
-                                                value: 'test link'
-                                            },
-                                            { // button
-                                                type: 'button',
-                                                value: 'test button'
+                                                value: 'Span Charm [版本 0.1.0-190531]'
                                             }
                                         ]
-                                    }
-                                ]
-                            },
-                            { // page
-                                type: 'page',
-                                lines: [
+                                    },
                                     { // line
                                         type: 'line',
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊'
+                                                value: '文字'
+                                            },
+                                            { // link
+                                                type: 'link',
+                                                value: '链接'
+                                            },
+                                            { // button
+                                                type: 'button',
+                                                value: '按钮'
+                                            },
+                                            { // progress
+                                                type: 'progress',
+                                                now: 33,
+                                                max: 100,
+                                                width: 100
+                                            },
+                                            { // rate
+                                                type: 'rate',
+                                                now: 3,
+                                                max: 5
+                                            },
+                                            { // check
+                                                type: 'check',
+                                                text: '多选',
+                                                value: true
+                                            },
+                                            { // radio
+                                                type: 'radio',
+                                                index: 0,
+                                                text: ['A', 'B', 'C']
                                             }
                                         ]
                                     }

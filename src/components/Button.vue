@@ -1,11 +1,11 @@
 <template lang="pug">
-    span(class='button') {{data.value}}
+    span(class='button') {{initData.value}}
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 
 export default Vue.extend({
-  props: ["data"]
+  props: ["initData"]
 });
 </script>

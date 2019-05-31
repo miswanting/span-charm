@@ -1,6 +1,6 @@
 <template lang="pug">
     span(class='radio')
-        span(class='item' :class="{active: i.i==$data.now}"  v-for="i in render()" :key="i" @click="click") {{i}}
+        span(class='item' :class="{active: i==data.index}"  v-for="(text,i) in data.text" :key="i" @click="click") {{text}}
 </template>
 
 <script lang="ts">
@@ -15,8 +15,6 @@ export default Vue.extend({
   },
   methods: {
     render: function() {
-      console.log(this.data);
-      console.log(this.$props);
       let itemList = [];
       for (let i = 0; i < this.$props.initData.text.length; i++) {
         let item = this.data.text[i];
@@ -25,7 +23,15 @@ export default Vue.extend({
       return itemList;
     },
     click: function(e) {
-      console.log(e.target.innerText);
+      for (let i = 0; i < this.$props.initData.text.length; i++) {
+        const item = this.$props.initData.text[i];
+        if (item == e.target.innerText) {
+          this.data.index = i;
+          break;
+        }
+      }
+      console.log(this.data.index);
+      
     }
   }
 });

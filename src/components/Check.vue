@@ -1,5 +1,5 @@
 <template lang="pug">
-    span(class='check' :class="{active: $data.value}" @click="click") {{initData.text}}
+    span(class='check' :class="{active: $data.data.value}" @click="click") {{data.text}}
 </template>
 
 <script lang="ts">
@@ -14,8 +14,8 @@ export default Vue.extend({
   },
   methods: {
     click: function(e) {
-      this.$data.value = !this.$data.value;
-      console.log(this.$data.value);
+      this.data.value = !this.data.value;
+      console.log(this.data.value);
     }
   }
 });
