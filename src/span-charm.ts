@@ -28,7 +28,7 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: 'Span Charm [版本 0.1.0-190531]'
+                                                value: '    Span Charm [版本 0.1.0-190531]'
                                             }
                                         ]
                                     },
@@ -37,15 +37,46 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '文字'
+                                                value: '    文字控件：'
+                                            },
+                                            { // text
+                                                type: 'text',
+                                                value: '测试文字'
+                                            },
+                                        ]
+                                    },
+                                    { // line
+                                        type: 'line',
+                                        child: [
+                                            { // text
+                                                type: 'text',
+                                                value: '    链接控件：'
                                             },
                                             { // link
                                                 type: 'link',
-                                                value: '链接'
+                                                value: '测试链接'
+                                            },
+                                        ]
+                                    },
+                                    { // line
+                                        type: 'line',
+                                        child: [
+                                            { // text
+                                                type: 'text',
+                                                value: '    按钮控件：'
                                             },
                                             { // button
                                                 type: 'button',
-                                                value: '按钮'
+                                                value: '测试按钮'
+                                            },
+                                        ]
+                                    },
+                                    { // line
+                                        type: 'line',
+                                        child: [
+                                            { // text
+                                                type: 'text',
+                                                value: '    进度控件：'
                                             },
                                             { // progress
                                                 type: 'progress',
@@ -53,15 +84,42 @@ let v = new Vue({
                                                 max: 100,
                                                 width: 100
                                             },
+                                        ]
+                                    },
+                                    { // line
+                                        type: 'line',
+                                        child: [
+                                            { // text
+                                                type: 'text',
+                                                value: '    评分控件：'
+                                            },
                                             { // rate
                                                 type: 'rate',
                                                 now: 3,
                                                 max: 5
                                             },
+                                        ]
+                                    },
+                                    { // line
+                                        type: 'line',
+                                        child: [
+                                            { // text
+                                                type: 'text',
+                                                value: '    多选控件：'
+                                            },
                                             { // check
                                                 type: 'check',
                                                 text: '多选',
                                                 value: true
+                                            },
+                                        ]
+                                    },
+                                    { // line
+                                        type: 'line',
+                                        child: [
+                                            { // text
+                                                type: 'text',
+                                                value: '    单选控件：'
                                             },
                                             { // radio
                                                 type: 'radio',
