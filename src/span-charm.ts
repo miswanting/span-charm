@@ -28,7 +28,7 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '    Span Charm [版本 0.1.0-190531]'
+                                                value: '    Span Charm [Ver 0.1.0-190531]'
                                             }
                                         ]
                                     },
@@ -37,11 +37,11 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '    文字控件：'
+                                                value: '    Text Component: '
                                             },
                                             { // text
                                                 type: 'text',
-                                                value: '测试文字'
+                                                value: 'TEXT'
                                             },
                                         ]
                                     },
@@ -50,11 +50,11 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '    链接控件：'
+                                                value: '    Link Component: '
                                             },
                                             { // link
                                                 type: 'link',
-                                                value: '测试链接'
+                                                value: 'LINK'
                                             },
                                         ]
                                     },
@@ -63,11 +63,11 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '    按钮控件：'
+                                                value: '    Button Component: '
                                             },
                                             { // button
                                                 type: 'button',
-                                                value: '测试按钮'
+                                                value: 'BUTTON'
                                             },
                                         ]
                                     },
@@ -76,7 +76,7 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '    进度控件：'
+                                                value: '    Progress Component: '
                                             },
                                             { // progress
                                                 type: 'progress',
@@ -91,7 +91,7 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '    评分控件：'
+                                                value: '    Rate Component: '
                                             },
                                             { // rate
                                                 type: 'rate',
@@ -105,12 +105,22 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '    多选控件：'
+                                                value: '    Checkbox Component: '
                                             },
                                             { // check
                                                 type: 'check',
-                                                text: '多选',
+                                                text: 'SelectA',
+                                                value: false
+                                            },
+                                            { // check
+                                                type: 'check',
+                                                text: 'SelectB',
                                                 value: true
+                                            },
+                                            { // check
+                                                type: 'check',
+                                                text: 'SelectC',
+                                                value: false
                                             },
                                         ]
                                     },
@@ -119,12 +129,12 @@ let v = new Vue({
                                         child: [
                                             { // text
                                                 type: 'text',
-                                                value: '    单选控件：'
+                                                value: '    Radio Component: '
                                             },
                                             { // radio
                                                 type: 'radio',
                                                 index: 0,
-                                                text: ['A', 'B', 'C']
+                                                text: ['SelectA', 'SelectB', 'SelectC']
                                             }
                                         ]
                                     }
