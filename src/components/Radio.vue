@@ -18,11 +18,11 @@ export default Vue.extend({
       let itemList = [];
       for (let i = 0; i < this.$props.initData.text.length; i++) {
         let item = this.data.text[i];
-        itemList.push(item);
+        // itemList.push(item);
       }
       return itemList;
     },
-    click: function(e) {
+    click: function(e: any) {
       for (let i = 0; i < this.$props.initData.text.length; i++) {
         const item = this.$props.initData.text[i];
         if (item == e.target.innerText) {
@@ -31,7 +31,6 @@ export default Vue.extend({
         }
       }
       console.log(this.data.index);
-      
     }
   }
 });

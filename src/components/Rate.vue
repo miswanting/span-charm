@@ -18,11 +18,11 @@ export default Vue.extend({
     render: function() {
       let itemList = [];
       for (let i = 0; i < this.$props.initData.max; i++) {
-        itemList.push({ i: i, text: temp.default[i] });
+        // itemList.push({ i: i, text: temp.default[i] });
       }
       return itemList;
     },
-    click: function(e) {
+    click: function(e: any) {
       // console.log(e.target.innerText);
       // console.log(this.$props.initData.max);
       for (let i = 0; i < temp.default.length; i++) {

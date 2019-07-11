@@ -27,7 +27,7 @@ export default Vue.extend({
       };
       for (let i = 0; i < this.$props.data.programs.length; i++) {
         const program: any = this.$props.data.programs[i];
-        data.titles.push(program.title);
+        // data.titles.push(program.title);
       }
       return data;
     },
