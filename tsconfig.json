@@ -3,11 +3,16 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "strict": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "noImplicitReturns": true,
         "module": "ES6",
         "moduleResolution": "Node",
-        "target": "ES5"
+        "target": "ES5",
+        "jsx": "react",
+        "esModuleInterop": true,
+        "lib": [
+            "es2020"
+        ]
     },
     "include": [
         "./src/**/*"
