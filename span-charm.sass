@@ -1,8 +1,22 @@
-$gray_scale: [black,dimgray,gray,darkgray,sliver,lightgray,gainsboro]
+$gray_scale: [black,dimgray,gray,darkgray,silver,lightgray,gainsboro,white]
+/*  虚无：black
+ *  暗示（我可以交互、我是底色）：dimgray
+ *  （）：gray
+ *  （）：darkgray
+ *  常规（控件：当前值）：silver
+ *  活性（控件：我被指着）：lightgray
+ *  激活（控件：我被按着，最小元素：我被指着）：gainsboro
+ *  激活（最小元素：我被按着）：white */
 $font-size: medium
 $line-height: 18px
 $show-border: false
 $hide-border: false
+
+@font-face 
+    font-family: "Monomono";
+    src: url("./Monomono.ttf") format("ttf");
+
+
 // 行高：21px
 // * 
 //     line-height: $line-height
@@ -69,7 +83,112 @@ nav // 窗口头
         &:hover
             color: #f00
             background-color: grey
-.output
+// .output
+//     div
+//         font-size: 0
+//     span
+//         font-size: $font-size
+//         &.text 
+//             position: relative
+//             div.popup
+//                 font-size: $font-size
+//                 position: absolute
+//                 visibility: hidden
+//                 text-align: center
+//                 display: inline-block
+//                 width: 120px
+//                 bottom: 100%
+//                 left: 50%
+//                 margin-left: -60px
+//                 background-color: dimgray
+//             &:hover
+//                 div.popup
+//                     visibility: visible
+//         &.button 
+//             padding: 0
+//             cursor: pointer
+//             background-color: gray
+//             border: none
+//             color: white
+//             text-align: center
+//             position: relative
+//             div.popup
+//                 font-size: $font-size
+//                 position: absolute
+//                 visibility: hidden
+//                 text-align: center
+//                 display: inline-block
+//                 width: 120px
+//                 bottom: 100%
+//                 left: 50%
+//                 margin-left: -60px
+//                 background-color: dimgray
+//             &:hover
+//                 color: #000
+//                 background-color: #fff
+//                 div.popup
+//                     visibility: visible
+//         &.link
+//             color: white
+//             cursor: pointer
+//             text-decoration: underline
+//             position: relative
+//             div.popup
+//                 font-size: $font-size
+//                 position: absolute
+//                 visibility: hidden
+//                 text-align: center
+//                 display: inline-block
+//                 width: 120px
+//                 bottom: 100%
+//                 left: 50%
+//                 margin-left: -60px
+//                 background-color: dimgray
+//             &:hover
+//                 color: #000
+//                 text-decoration: none
+//                 background-color: #fff 
+//                 div.popup
+//                     visibility: visible
+//         &.check
+//             cursor: pointer
+//             background-color: gray
+//             &:hover
+//                 text-decoration: underline
+//         &.bar
+//             font-size: 0
+//             background-color: dimgray
+//             display: inline-block
+//             width: 100px
+//             position: relative
+//             top: 3px
+//             height: $line-height - 1
+//             .barbar
+//                 display: inline-block
+//                 width: 50%
+//                 height: 100%
+//                 background-color: lightgray
+
+//         &.rate
+//         &.radio
+//             cursor: pointer
+//             background-color: gray
+//             &:hover
+//                 text-decoration: underline
+    
+.input
+    display: flex
+    color: white
+    background-color: black
+    cursor: default
+    &:focus
+        outline: 0px solid transparent
+    .input-value
+        overflow-wrap: break-word
+        width: 100%
+        &:focus
+            outline: 0px solid transparent
+.page
     div
         font-size: 0
     span
@@ -93,7 +212,7 @@ nav // 窗口头
         &.button 
             padding: 0
             cursor: pointer
-            background-color: gray
+            background-color: dimgray
             border: none
             color: white
             text-align: center
@@ -110,10 +229,15 @@ nav // 窗口头
                 margin-left: -60px
                 background-color: dimgray
             &:hover
-                color: #000
-                background-color: #fff
+                color: black
+                background-color: gainsboro
                 div.popup
                     visibility: visible
+            &:active
+                color: black
+                background-color: white
+                
+
         &.link
             color: white
             cursor: pointer
@@ -131,46 +255,84 @@ nav // 窗口头
                 margin-left: -60px
                 background-color: dimgray
             &:hover
-                color: #000
+                color: black
                 text-decoration: none
-                background-color: #fff 
+                background-color: gainsboro
                 div.popup
                     visibility: visible
+            &:active
+                color: black
+                background-color: white
         &.check
             cursor: pointer
-            background-color: gray
+            // color: red
+            background-color: dimgray
             &:hover
-                text-decoration: underline
-        &.bar
+                background-color: gray
+            &:active
+                background-color: darkgray
+            &.active
+                // color: green
+                color: black
+                background-color: lightgray
+                &:hover
+                    background-color: gainsboro
+                &:active
+                    background-color: white
+        &.progress
             font-size: 0
             background-color: dimgray
             display: inline-block
             width: 100px
             position: relative
-            top: 3px
-            height: $line-height - 1
-            .barbar
+            // top: 3px
+            // height: $line-height - 1
+            .bar
                 display: inline-block
                 width: 50%
                 height: 100%
-                background-color: lightgray
+                background-color: silver
+                &:before 
+                    content: "\200b";
 
         &.rate
+            cursor: pointer
+            background-color: dimgray // 基色
+            &:hover
+                .item
+                    background-color: gray
+                    &:hover
+                        background-color: darkgray
+                    &.active
+                        color: black
+                        background-color: lightgray
+                        &:hover
+                            background-color: gainsboro
+            &:active
+                .item
+                    background-color: darkgray
+                    &:active
+                        background-color: silver
+                    &.active
+                        color: black
+                        background-color: gainsboro
+                        &:active
+                        background-color: white
+            .active
+                color: black
+                background-color: silver // 基色
         &.radio
             cursor: pointer
-            background-color: gray
+            background-color: dimgray
             &:hover
-                text-decoration: underline
-    
-.input
-    display: flex
-    color: white
-    background-color: black
-    cursor: default
-    &:focus
-        outline: 0px solid transparent
-    .input-value
-        overflow-wrap: break-word
-        width: 100%
-        &:focus
-            outline: 0px solid transparent
+                background-color: gray
+            &:active
+                background-color: darkgray
+            .item
+                &.active
+                    color: black
+                    background-color: lightgray
+                    &:hover
+                        background-color: gainsboro
+                    &:active
+                        background-color: white
