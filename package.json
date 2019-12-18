@@ -1,0 +1,25 @@
+{
+  "name": "span-charm",
+  "version": "0.1.0",
+  "description": "Maybe the 1st front-end INLINE component library.",
+  "main": "span-charm.js",
+  "scripts": {
+    "调试": "npx sass span-charm.sass span-charm.css",
+    "调试-监视": "npx sass --watch span-charm.sass span-charm.css",
+    "初始化": "npm i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miswanting/span-charm.git"
+  },
+  "author": "Miswanting",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/miswanting/span-charm/issues"
+  },
+  "homepage": "https://github.com/miswanting/span-charm#readme",
+  "devDependencies": {
+    "normalize.css": "latest",
+    "sass": "latest"
+  }
+}
