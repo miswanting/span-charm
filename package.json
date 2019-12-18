@@ -2,7 +2,7 @@
   "name": "span-charm",
   "version": "0.1.0",
   "description": "Maybe the 1st front-end INLINE component library.",
-  "main": "span-charm.js",
+  "main": "span-charm.css",
   "scripts": {
     "调试": "npx sass span-charm.sass span-charm.css",
     "调试-监视": "npx sass --watch span-charm.sass span-charm.css",
