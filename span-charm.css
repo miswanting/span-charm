@@ -345,110 +345,232 @@ template {
 html {
   overflow: hidden;
   height: 100%;
-  background: rgba(0, 0, 0, 0);
+  background: #0000;
+  font-size: medium;
 }
 
 body {
   margin: 0;
   color: #fff;
-  background-color: #000;
-  overflow-y: auto;
-  font-family: Microsoft YaHei;
+  background-color: #0000;
+  font-family: Monomono;
   height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  -webkit-user-select: none;
+  color: gray;
+  background-color: #000;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-nav {
+main {
+  flex-grow: 1;
+  overflow-y: auto;
+  color: white;
+  background-color: black;
+}
+
+footer {
+  border-top: 1px solid dimgray;
   color: gray;
-  background-color: #000;
+  background-color: black;
+}
+
+nav {
   display: flex;
-  text-align: center;
 }
-nav .menu {
-  width: 2em;
+nav .quick {
+  padding: 0em 0.5em;
   cursor: pointer;
+  border-right: 1px solid gray;
 }
-nav .menu:hover {
-  color: #000;
+nav .quick svg {
+  font-size: 14px;
+}
+nav .quick:hover {
+  color: black;
   background-color: grey;
 }
 nav .title {
-  padding-left: 0.5em;
-  padding-right: 0em;
-  cursor: default;
-}
-nav .title.active {
-  color: grey;
-  background-color: #222;
-}
-nav .title .close {
-  padding-left: 0.2em;
-  padding-right: 0.5em;
-  cursor: pointer;
-  color: #000;
-}
-nav .title .close:hover {
-  color: #f00;
-  background-color: grey;
+  flex-grow: 1;
+  text-align: center;
+  -webkit-app-region: drag;
+  cursor: grab;
 }
 nav .title:hover {
   color: black;
   background-color: grey;
 }
-nav .min {
-  width: 1.5em;
-  margin-left: auto;
+nav .title:active {
+  cursor: grabbing;
+}
+nav .tool {
+  padding: 0em 0.5em;
   cursor: pointer;
+  border-left: 1px solid gray;
+}
+nav .tool svg {
+  font-size: 14px;
+}
+nav .tool:hover {
+  color: cyan;
+  background-color: grey;
+}
+nav .min {
+  padding: 0em 0.5em;
+  cursor: pointer;
+  border-left: 1px solid gray;
+}
+nav .min svg {
+  font-size: 14px;
 }
 nav .min:hover {
-  color: #0f0;
+  color: green;
   background-color: grey;
 }
 nav .max {
-  width: 1.5em;
+  padding: 0em 0.5em;
   cursor: pointer;
+  border-left: 1px solid gray;
+}
+nav .max svg {
+  font-size: 14px;
 }
 nav .max:hover {
-  color: #ff0;
+  color: yellow;
   background-color: grey;
 }
 nav .close {
-  width: 1.5em;
+  padding: 0em 0.5em;
   cursor: pointer;
+  border-left: 1px solid gray;
+}
+nav .close svg {
+  font-size: 14px;
 }
 nav .close:hover {
-  color: #f00;
+  color: red;
   background-color: grey;
 }
-
-.input {
-  display: flex;
-  color: white;
-  background-color: black;
-  cursor: default;
-}
-.input:focus {
-  outline: 0px solid transparent;
-}
-.input .input-value {
-  overflow-wrap: break-word;
-  width: 100%;
-}
-.input .input-value:focus {
-  outline: 0px solid transparent;
-}
-
-.page div {
-  font-size: 0;
-}
-.page span {
-  font-size: medium;
-}
-.page span.text {
+nav .menu {
+  cursor: pointer;
   position: relative;
 }
-.page span.text div.popup {
+nav .menu .name {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+nav .menu .name:hover {
+  color: #000;
+  background-color: grey;
+}
+nav .menu .list {
+  min-width: 100px;
+  position: absolute;
+  z-index: 2;
+  border: 1px solid dimgray;
+  background: black;
+  display: none;
+}
+nav .menu .list.show {
+  display: block;
+}
+nav .menu .list .item:hover {
+  border: 1px solid gray;
+  background: dimgray;
+}
+
+main.splash {
+  display: flex;
+  align-items: center;
+}
+main.splash div {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+main.game .indicator,
+main.console .indicator {
+  margin-right: 0.2em;
+  color: cyan;
+}
+main.game .in:focus,
+main.console .in:focus {
+  outline: none;
+}
+
+main.pause {
+  display: flex;
+  align-items: center;
+}
+main.pause > div {
+  width: 100%;
+  cursor: default;
+  text-align: center;
+}
+main.pause > div > div {
+  margin: 0em 3em;
+  cursor: pointer;
+}
+main.pause > div > div:hover {
+  background: gray;
+}
+
+section {
+  margin: 0.5em;
+  border: 1px solid white;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+section.disabled {
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+}
+.row .column {
+  flex: 1;
+  text-align: center;
+}
+
+.progress {
+  background-color: dimgray;
+  display: inline-block;
+  width: 100px;
+  position: relative;
+}
+.progress .bar {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background-color: silver;
+}
+.progress .bar:before {
+  content: "​";
+}
+
+.button {
+  padding: 0;
+  margin-left: 1px;
+  margin-right: 1px;
+  cursor: pointer;
+  background-color: dimgray;
+  border: none;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.button div.popup {
   font-size: medium;
   position: absolute;
   visibility: hidden;
@@ -460,10 +582,49 @@ nav .close:hover {
   margin-left: -60px;
   background-color: dimgray;
 }
-.page span.text:hover div.popup {
+.button div.popup:hover {
+  color: black;
+  background-color: gainsboro;
+}
+.button div.popup:hover div.popup {
   visibility: visible;
 }
-.page span.button {
+.button div.popup:hover:active {
+  color: black;
+  background-color: white;
+}
+.button:hover {
+  color: black;
+  background-color: gainsboro;
+}
+.button:hover div.popup {
+  visibility: visible;
+}
+.button:active {
+  color: black;
+  background-color: white;
+}
+
+.text {
+  position: relative;
+}
+.text div.popup {
+  font-size: medium;
+  position: absolute;
+  visibility: hidden;
+  text-align: center;
+  display: inline-block;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  background-color: dimgray;
+}
+.text:hover div.popup {
+  visibility: visible;
+}
+
+.button {
   padding: 0;
   cursor: pointer;
   background-color: dimgray;
@@ -472,7 +633,7 @@ nav .close:hover {
   text-align: center;
   position: relative;
 }
-.page span.button div.popup {
+.button div.popup {
   font-size: medium;
   position: absolute;
   visibility: hidden;
@@ -484,24 +645,25 @@ nav .close:hover {
   margin-left: -60px;
   background-color: dimgray;
 }
-.page span.button:hover {
+.button:hover {
   color: black;
   background-color: gainsboro;
 }
-.page span.button:hover div.popup {
+.button:hover div.popup {
   visibility: visible;
 }
-.page span.button:active {
+.button:active {
   color: black;
   background-color: white;
 }
-.page span.link {
+
+.link {
   color: white;
   cursor: pointer;
   text-decoration: underline;
   position: relative;
 }
-.page span.link div.popup {
+.link div.popup {
   font-size: medium;
   position: absolute;
   visibility: hidden;
@@ -513,107 +675,214 @@ nav .close:hover {
   margin-left: -60px;
   background-color: dimgray;
 }
-.page span.link:hover {
+.link:hover {
   color: black;
   text-decoration: none;
   background-color: gainsboro;
 }
-.page span.link:hover div.popup {
+.link:hover div.popup {
   visibility: visible;
 }
-.page span.link:active {
+.link:active {
   color: black;
   background-color: white;
 }
-.page span.check {
+
+.check {
   cursor: pointer;
   background-color: dimgray;
 }
-.page span.check:hover {
+.check:hover {
   background-color: gray;
 }
-.page span.check:active {
-  background-color: darkgray;
-}
-.page span.check.active {
-  color: black;
-  background-color: lightgray;
-}
-.page span.check.active:hover {
-  background-color: gainsboro;
-}
-.page span.check.active:active {
+.check:active {
   background-color: white;
 }
-.page span.progress {
+.check.active {
+  background-color: lightgray;
+}
+.check.active:hover {
+  background-color: gainsboro;
+}
+.check.active:active {
+  background-color: white;
+}
+
+.progress {
   font-size: 0;
   background-color: dimgray;
   display: inline-block;
   width: 100px;
   position: relative;
+  height: 16px;
+  line-height: 26px;
 }
-.page span.progress .bar {
+.progress .bar {
   display: inline-block;
   width: 50%;
   height: 100%;
   background-color: silver;
 }
-.page span.progress .bar:before {
+.progress .bar:before {
   content: "​";
 }
-.page span.rate {
+
+.rate {
   cursor: pointer;
   background-color: dimgray;
 }
-.page span.rate:hover .item {
+.rate:hover .item {
   background-color: gray;
 }
-.page span.rate:hover .item:hover {
+.rate:hover .item:hover {
   background-color: darkgray;
 }
-.page span.rate:hover .item.active {
+.rate:hover .item.active {
   color: black;
   background-color: lightgray;
 }
-.page span.rate:hover .item.active:hover {
+.rate:hover .item.active:hover {
   background-color: gainsboro;
 }
-.page span.rate:active .item {
+.rate:active .item {
   background-color: darkgray;
 }
-.page span.rate:active .item:active {
+.rate:active .item:active {
   background-color: silver;
 }
-.page span.rate:active .item.active {
+.rate:active .item.active {
   color: black;
   background-color: gainsboro;
 }
-.page span.rate:active .item.active:active {
+.rate:active .item.active:active {
   background-color: white;
 }
-.page span.rate .active {
+.rate .active {
   color: black;
   background-color: silver;
 }
-.page span.radio {
+
+.radio {
   cursor: pointer;
-  background-color: dimgray;
 }
-.page span.radio:hover {
-  background-color: gray;
+.radio:hover {
+  background-color: silver;
 }
-.page span.radio:active {
+.radio:active {
+  background-color: lightgray;
+}
+.radio .item {
   background-color: darkgray;
 }
-.page span.radio .item.active {
+.radio .item:hover {
   color: black;
   background-color: lightgray;
 }
-.page span.radio .item.active:hover {
+.radio .item:active {
+  color: black;
+  background-color: white;
+}
+.radio .item.active {
+  color: black;
+  background-color: lightgray;
+}
+.radio .item.active:hover {
   background-color: gainsboro;
 }
-.page span.radio .item.active:active {
+.radio .item.active:active {
   background-color: white;
+}
+
+.dropdown {
+  cursor: pointer;
+  position: relative;
+}
+.dropdown:hover {
+  background-color: silver;
+}
+.dropdown:active {
+  background-color: lightgray;
+}
+.dropdown .list {
+  position: absolute;
+  text-align: center;
+  display: none;
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  z-index: 1;
+  margin-left: -60px;
+}
+.dropdown .list.show {
+  display: block;
+}
+.dropdown .item {
+  background-color: darkgray;
+}
+.dropdown .item:hover {
+  color: black;
+  background-color: lightgray;
+}
+.dropdown .item:active {
+  color: black;
+  background-color: white;
+}
+.dropdown .item.active {
+  color: black;
+  background-color: lightgray;
+}
+.dropdown .item.active:hover {
+  background-color: gainsboro;
+}
+.dropdown .item.active:active {
+  background-color: white;
+}
+
+.divider {
+  display: flex;
+}
+.divider .breaker {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.divider .breaker span {
+  height: 1px;
+  background-color: white;
+}
+
+.input {
+  border: 1px solid gainsboro;
+  height: 19px;
+  padding: 0px;
+  outline-offset: 0px;
+  color: white;
+  background: black;
+}
+.input:focus {
+  border: 1px solid white;
+  outline: none;
+}
+
+.toast {
+  cursor: default;
+}
+.toast .item {
+  z-index: 1;
+  border: 1px solid gray;
+  color: white;
+  background: dimgray;
+  padding: 0px 0.5em;
+  border-radius: 0.2em;
+}
+.toast .item span {
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+.toast .item span:hover {
+  color: black;
+  background: white;
 }
 
 /*# sourceMappingURL=span-charm.css.map */
